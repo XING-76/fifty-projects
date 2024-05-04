@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+:root {
+    --white: #ffffff;
+    --bg: #4682b4;
+    --link: #add8e6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--white);
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--white);
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: var(--white);
+}
+
+.form-control input:-webkit-autofill,
+.form-control input:-webkit-autofill:hover,
+.form-control input:-webkit-autofill:focus,
+.form-control input:-webkit-autofill:active {
+    background-color: transparent !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: var(--white) !important;
+    color: var(--white) !important;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: var(--link);
+}
+
+.form-control label {
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: var(--link);
+    transform: translateY(-30px);
+}
+
+.btn {
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+    background-color: var(--link);
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.text {
+    margin-top: 30px;
+}
