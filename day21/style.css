@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --blue: #4682b4;
+    --light-black: #333333;
+    --gray: #cccccc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.empty {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border: solid 3px var(--black);
+    background: var(--white);
+}
+
+.fill {
+    background-image: url('https://picsum.photos/150/150');
+    height: 145px;
+    width: 145px;
+    cursor: pointer;
+}
+
+.hold {
+    border: solid 5px var(--gray);
+}
+
+.hovered {
+    background-color: var(--light-black);
+    border-color: var(--white);
+    border-style: dashed;
+}
+
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
+}
